@@ -2,12 +2,11 @@
 {% extends 'base.html' %}
 <!---import static django-->
 {% load static %}
-
 <!---block django-->
 {% block body %}
 
   <!-- ================> Page header start here <================== -->
-  <section class="page-header bg--cover" style="background-image:url({% static 'assets/images/header/1.png' %})">
+  <section class="page-header bg--cover" >
     <div class="container">
       <div class="page-header__content" data-aos="fade-right" data-aos-duration="1000">
         <h2>Profile</h2>
@@ -37,13 +36,16 @@
 
           <div class="col-md-12 col-lg-5">
             <div style=" position:relative;">
+              {% if not forign %}
               {% if user.has_right_sign %}
               <h1 style="position: absolute; font-size:90px ;  bottom:10px;left:10px;z-index:9;" class="green-color">
                 <img src="{% static 'assets/images/rightsign.png' %}" style="width: 100px;" alt="" srcset="">
               </h1>
               {% endif %}
+              {% endif %}
+
               <div class="team__thumb rotate" style="border-radius: 100%; position:relative; height:450px;width:450px">
-                <img src="{{profile.image.url}}" calss="rotate-img" style="border-radius: 100%; height:450px;width:450px"
+                <img src="{{  profile.image.url}}" calss="rotate-img" style="border-radius: 100%; height:450px;width:450px"
                   alt="Team Image">
               </div>
           </div>
@@ -233,7 +235,7 @@
                               <tbody id="teamtable" style="vertical-align:middle !important;">
                                   {% for profile in users_profiles %}
                                   <tr style="width: fit-content !important;">
-                                      <td class="*" style="width: fit-content !important;">
+                                      <td class="*" style="width: fit-content !important; white-space: nowrap;">
                                           <a href="{% url 'accounts:team_profile' profile.user.id %}">
                                               {{ profile.name|safe }}
                                           </a>

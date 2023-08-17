@@ -9,6 +9,8 @@ class MemberShipAdmin(admin.ModelAdmin):
 #Profile search
 class ProfileAdmin(admin.ModelAdmin):
     search_fields = ['name','address','birth_date','coin']
+    #hidden field rank
+    exclude = ('rank',)
 
 
 #register

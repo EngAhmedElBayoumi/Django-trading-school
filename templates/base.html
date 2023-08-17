@@ -1,7 +1,5 @@
 {% load static %}
 <!----load media -->
-
-
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 
@@ -34,6 +32,8 @@
   <link rel="shortcut icon" href="{% static 'assets/images/logo/preloader.png' %}" type="image/x-icon">
 
   <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+  {% comment %} <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.0.0/css/bootstrap.min.css" integrity="sha384-P4uhUIGk/q1gaD/NdgkBIl3a6QywJjlsFJFk7SPRdruoGddvRVSwv5qFnvZ73cpz" crossorigin="anonymous"> {% endcomment %}
+
   <link rel="stylesheet" href="{% static 'assets/css/aos.css' %}">
   <link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}">
 
@@ -78,7 +78,7 @@
         <div class="header-wrapper">
           <div class="logo">
             <a href="{% url 'home:home' %}">
-              <img class="" style="width:130px;" src="{% static 'assets/images/logo/logo.png' %}" alt="logo">
+              <img class="" style="width:130px;" src="{% static 'assets/images/logo/preloader.png' %}" alt="logo">
             </a>
           </div>
           <div class="menu-area">
@@ -97,8 +97,8 @@
                 <a href="#">Extra Pages </a>
                 <ul class="submenu">
                   <li><a href="https://www.tradingview.com" class="menu-li-a">Trading View </a></li>
-                  <li><a href="https://sa.investing.com/economic-calendar/" class="menu-li-a">Ecounmic&nbsp;calendar </a></li>
                   <li><a href="https://gocharting.com/" class="menu-li-a">GoCharting</a></li>
+                  <li><a href="https://sa.investing.com/economic-calendar/" class="menu-li-a">Ecounmic&nbsp;calendar </a></li>
 
                 </ul>
               </li>
@@ -163,7 +163,7 @@
             <div class="col-md-8">
               <div class="footer__about">
                 <a href="{% url 'home:home' %}" class="footer__about-logo">
-                  <img style="width:250px;" src="{% static 'assets/images/logo/logo.png' %}"
+                  <img style="width:250px;" src="{% static 'assets/images/logo/preloader.png' %}"
                     alt="Logo"></a>
                 <p class="footer__about-moto ">
                   Success in the market belongs to people who seek education, not to those who trade based on emotions.

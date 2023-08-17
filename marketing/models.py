@@ -22,14 +22,13 @@ class Marketing_Lecture(models.Model):
     course = models.ForeignKey(Marketing_Course,on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     image = models.ImageField(upload_to='static/course/image')
-    description = models.TextField()
+    description = models.TextField(null=True,blank=True)
     video = models.FileField(upload_to='static/course/video')
     number = models.IntegerField(default=0)
     rate = models.IntegerField(default=0)
     def __str__(self):
         return self.title
 
-    
 class Marketing_Lecture_rate(models.Model):
     user=models.ForeignKey(CustomUser,on_delete=models.CASCADE)
     lecture=models.ForeignKey(Marketing_Lecture,on_delete=models.CASCADE)
@@ -38,13 +37,7 @@ class Marketing_Lecture_rate(models.Model):
     
     
     
-    
-# class CourseRating(models.Model):
-#     course = models.OneToOneField(Course, on_delete=models.CASCADE)
-#     rating = models.FloatField(default=0)
-    
-#     def __str__(self):
-#         return str(self.rating)
+
 
     
 

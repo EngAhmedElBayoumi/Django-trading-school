@@ -35,10 +35,6 @@ def log_in(request):
             #send message
             messages.error(request, 'the login data not correct')
             return render(request,'index.html')
-    
-    
-
-    
     #check if user is blocked
         if user.is_blocked:
             #send message
@@ -146,6 +142,21 @@ def add_new_member(request):
         profileobject = Profile.objects.create(name=name,address=address,birth_date=birthdate,membership=membershipobject,image=image,user=user)
         #save profile
         profileobject.save()
+        
+        #get myprofile
+        myprofile = Profile.objects.get(user=create_by)
+        # myprofile rank +1
+        myprofile.rank = myprofile.rank + 1
+        #myprofile.save()
+        myprofile.save()
+        #if rank >= 50 then customuser.has_right_sign=true
+        if myprofile.rank >= 50:
+            create_by.has_right_sign = True
+            create_by.save()
+            
+        
+        
+        
     #redirct to profile
     return redirect('accounts:profile')
 

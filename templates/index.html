@@ -45,9 +45,9 @@
 <body>
 
   <!-- ===============>> Preloader start here <<================= -->
-  <div class="preloader">
+  {% comment %} <div class="preloader">
     <img src="{% static 'assets/images/logo/preloader.png' %}" style="width:450px;hieght:450px" alt="preloader icon">
-  </div>
+  </div> {% endcomment %}
   <!-- ===============>> Preloader end here <<================= -->
 
 
@@ -69,19 +69,18 @@
     <div class="container">
       <div class="account__wrapper">
         <div class="row g-4">
-          <div class="col-md-12 col-lg-5" style="display:flex; align-items:center;" >
-            <img src="{% static 'assets/images/logo/logo.png' %}" class="img-fluid rounded-top scale2" alt="">
-          </div>
-          <div class="col-lg-7 md-12">
+          
+          <div class="col-12">
             <div class="account__content account__content--style1">
-
-              <!-- account tittle -->
-              <div class="account__header text-center">
-                <h2 class="green-color"> Trading Whale School</h2>
-                <p>
-                  To start learning, you must log in
-                </p>
+              <div class="text-center" style="width:100%"> 
+                <img src="{% static 'assets/images/logo/preloader.png' %}" style="width:500px">
+                  <h2 class="green-color"> Trading Whale School</h2>
+                  <p>
+                    To start learning, you must log in
+                  </p>
               </div>
+              <!-- account tittle -->
+              
 
               <!-- account social -->
 

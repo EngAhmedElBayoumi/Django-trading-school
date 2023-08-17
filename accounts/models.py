@@ -28,6 +28,8 @@ class Profile(models.Model):
     image=models.ImageField(upload_to='static/users/',null=True,blank=True)
     #new field marketing_avilable
     marketing_avilable=models.BooleanField(default=False)
+    #new field rank
+    rank=models.IntegerField(default=0)
     
     def __str__(self):
         return self.name    

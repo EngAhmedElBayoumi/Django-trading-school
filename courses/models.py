@@ -23,7 +23,7 @@ class Lecture(models.Model):
     course = models.ForeignKey(Course,on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     image = models.ImageField(upload_to='static/course/image')
-    description = models.TextField()
+    description = models.TextField(null=True , blank=True)
     video = models.FileField(upload_to='static/course/video')
     number = models.IntegerField(default=0)
     rate = models.IntegerField(default=0)

@@ -55,11 +55,11 @@ SCHEDULER_RUN_EVERY_SECS = 3
 
 
 JAZZMIN_SETTINGS = {
-   #show View Site button
-    "show_sidebar": True, 
-   # admin panel rtl
-    "rtl": False,
-     
+    "site_title": "Trading Whale School",
+    "site_header": "Trading Whale School",
+
+    # show view site button
+    "show_view_site_button": True,
 }
 
 AUTHENTICATION_BACKENDS = [
@@ -94,6 +94,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -152,7 +153,10 @@ STATICFILES_DIRS = [
     BASE_DIR, 'static'
 
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 
 
