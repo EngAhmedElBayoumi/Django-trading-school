@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-5vf5zjeb9&8x6o+-i4nfk1ux&=%6pd-h4$#d8%a71--g@d=hyq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vercel.app']
 # Application definition
 INSTALLED_APPS = [
     'jazzmin',

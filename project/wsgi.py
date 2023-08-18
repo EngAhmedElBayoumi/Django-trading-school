@@ -16,5 +16,8 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project.settings')
 
 application = get_wsgi_application()
 
+app=application 
+
+
 # Call the start_scheduler function to initialize the scheduler
 start_scheduler()
