@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-5vf5zjeb9&8x6o+-i4nfk1ux&=%6pd-h4$#d8%a71--g@d=hyq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app','localhost','127.0.0.1']
 # Application definition
 INSTALLED_APPS = [
     'jazzmin',
@@ -106,13 +106,24 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+#postgres database
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'wyj7Epq9iuiG36VOrFgS',
+        'HOST': 'containers-us-west-190.railway.app',  # or your PostgreSQL server's hostname
+        'PORT': '6919',       # default PostgreSQL port
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -153,6 +164,7 @@ STATICFILES_DIRS = [
     BASE_DIR, 'static'
 
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build','static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
