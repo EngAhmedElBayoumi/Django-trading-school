@@ -252,9 +252,9 @@
                                       <th class="column-status text-center green-color">الاسم</th>
                                       <th class="column-status text-center green-color">البريد الالكتروني</th>
                                       <th class="column-date text-center green-color">رقم الهاتف</th>
-                                      <th class="column-quiz text-center green-color">بدأ في</th>
-                                      <th class="column-quiz text-center green-color">يتم الحظر في </th>
-                                      <th class="column-quiz text-center green-color">عدد الاعضاء</th>
+                                      <th class="column-quiz text-center green-color"> تاريخ البدأ</th>
+                                      <th class="column-quiz text-center green-color">  تاريخ الاغلاق </th>
+                                      <th class="column-quiz text-center green-color" style="width: fit-content !important; white-space: nowrap;">عدد الاعضاء</th>
                                       <th class="column-time-interval text-center green-color">العملات</th>
                                       <th class="column-time-interval text-center green-color">ارسال عملات</th>
                                   </tr>
@@ -292,7 +292,7 @@
                                           {% csrf_token %}
                                           <input class="form-control send-coin-input" style="min-width: 150px;" type="number" name="coin">
                                           <input class="form-control" style="min-width: 150px;" type="number" name="phone" value="{{ profile.user.phone }}" hidden>
-                                          <button class="btn trk-btn--primary" style="margin-left: 5px; color:white">Send</button>
+                                          <button class="btn trk-btn--primary" style="margin-left: 5px; color:white">ارسال</button>
                                       </form>
                                       
                                       </td>
