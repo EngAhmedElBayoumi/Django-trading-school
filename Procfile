@@ -1,0 +1,1 @@
+web: genicorn project.wsgi --log-file -
