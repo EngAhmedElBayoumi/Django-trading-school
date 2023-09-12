@@ -1,0 +1,15 @@
+.offset-md-6{
+    margin-right: 50% !important;
+}
+
+/** @media max lenght 740 offset-md-6 none  **/
+@media (max-width: 767px) {
+    .offset-md-6{
+        margin-right: 0% !important;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@500;900&display=swap');
+*{
+    font-family: 'Noto Sans Arabic', sans-serif;
+}

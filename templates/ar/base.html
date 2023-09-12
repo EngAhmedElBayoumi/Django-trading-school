@@ -1,0 +1,347 @@
+{% load static %}
+<!----load media -->
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <title>Trading Whale school </title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Sites meta Data -->
+  <meta name="application-name"
+    content="Bitrader - Professional Multipurpose HTML Template for Your Crypto, Forex, and Stocks Trading Business">
+  <meta name="author" content="thetork">
+  <meta name="keywords" content="Bitrader, Crypto, Forex, and Stocks Trading Business">
+  <meta name="description"
+    content="Experience the power of Bitrader, the ultimate HTML template designed to transform your trading business. With its sleek design and advanced features, Bitrader empowers you to showcase your expertise, engage clients, and dominate the markets. Elevate your online presence and unlock new trading possibilities with Bitrader.">
+
+  <!-- OG meta data -->
+  <meta property="og:title"
+    content="Bitrader - Professional Multipurpose HTML Template for Your Crypto, Forex, and Stocks Trading Business">
+  <meta property="og:site_name" content=Bitrader>
+  <meta property="og:url" content="index-2.html">
+  <meta property="og:description"
+    content="Welcome to Bitrader, the game-changing HTML template meticulously crafted to revolutionize your trading business. With its sleek and modern design, Bitrader provides a cutting-edge platform to showcase your expertise, attract clients, and stay ahead in the competitive trading markets.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/logo/preloader.png">
+
+
+
+  <link rel="shortcut icon" href="{% static 'assets/images/logo/preloader.png' %}" type="image/x-icon">
+
+  <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+  {% comment %} <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.0.0/css/bootstrap.min.css" integrity="sha384-P4uhUIGk/q1gaD/NdgkBIl3a6QywJjlsFJFk7SPRdruoGddvRVSwv5qFnvZ73cpz" crossorigin="anonymous"> {% endcomment %}
+  
+  <link rel="stylesheet" href="{% static 'assets/css/aos.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}">
+  
+  <link rel="stylesheet" href="{% static 'assets/css/swiper-bundle.min.css' %}">
+  
+  
+  <!--font awsome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  
+  <!-- main css for template -->
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/bootstrapcustom.css' %}">
+  {% block style %}
+
+  {% endblock %}
+
+</head>
+
+<body dir="rtl">
+
+  <!-- ===============>> Preloader start here <<================= -->
+  <div class="preloader" style="width:300px;hieght:300px; left:45vw">
+    <img src="{% static 'assets/images/logo/preloader.png' %}" alt="preloader icon">
+  </div>
+  <!-- ===============>> Preloader end here <<================= -->
+
+
+
+  <!-- ===============>> light&dark switch start here <<================= -->
+  <div class="">
+    <span class="" id="btnSwitch">
+    </span>
+  </div>
+  <!-- ===============>> light&dark switch start here <<================= -->
+
+  <!-- Header for language button -->
+  <header class="" style="padding: 20px;background-color: #081c16">
+    <div class="container d-flex" style="align-items:center">
+        <!---language icon-->
+        <i class="fa fa-language"></i>
+        <div class="custom-dropdown" >
+            <button class="dropdown-toggle" style="background-color: #00150f; border: none;" id="languageDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="flag-icon flag-icon-us"></span> عربي
+            </button>
+            <div class="dropdown-menu" aria-labelledby="languageDropdown">
+                <a class="dropdown-item" href="{% url 'home:home' %}">
+                    <span class="flag-icon flag-icon-us"></span> English
+                </a>
+                <a class="dropdown-item" href="{% url 'home:home_ar' %}">
+                    <span class="flag-icon flag-icon-mx"></span> عربي
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+  <!-- ===============>> Header section start here <<================= -->
+  <header class="header-section header-section--style1">
+    <div class="header-bottom">
+      <div style="display: flex; justify-content: space-evenly;">
+        <div class="header-wrapper">
+          <div class="logo">
+            <a href="{% url 'home:home_ar' %}">
+              <img class="" style="width:130px;" src="{% static 'assets/images/logo/preloader.png' %}" alt="logo">
+            </a>
+          </div>
+          <div class="menu-area">
+            <ul class="menu">
+              <li>
+                <a href="{% url 'home:home_ar' %}" class="menu-li-a">الرئيسية </a>
+              </li>
+              <li>
+                <a href="{% url 'accounts:profile_ar' %}" class="menu-li-a">البروفايل </a>
+              </li>
+              <li>
+                <a href="{% url 'courses:courses_category_ar' %}" class="menu-li-a">كورسات </a>
+              </li>
+              <!---submenu-->
+              <li class="menu-item-has-children">
+                <a href="#">صفحات اخري </a>
+                <ul class="submenu">
+                  <li><a href="https://www.tradingview.com" class="menu-li-a">Trading View موقع</a></li>
+                  <li><a href="https://gocharting.com/" class="menu-li-a">GoCharting موقع</a></li>
+                  <li><a href="https://sa.investing.com/economic-calendar/" class="menu-li-a">المفكرة الاقتصادية</a></li>
+
+                </ul>
+              </li>
+              <!---submenu-->
+              
+              {% comment %} <li>
+                <a href="https://www.tradingview.com" class="menu-li-a">Trading View </a>
+              </li>
+              <li>
+                <a href="https://sa.investing.com/economic-calendar/" class="menu-li-a">Ecounmic&nbsp;calendar </a>
+              </li> {% endcomment %}
+              <li>
+                <a href="{% url 'marketing:marketing_courses_category_ar' %}" class="menu-li-a">التسويق </a>
+              </li>
+              <li>
+                <a href="{% url 'contact:contact_ar' %}" class="menu-li-a">تواصل معنا</a>
+              </li>
+              {% if user.is_superuser %}
+              <li>
+                <a href="{% url 'admin:index' %}" class="menu-li-a">لوحة التحكم</a>
+              </li>
+              {% endif %}
+
+            </ul>
+
+          </div>
+          <div class="header-action">
+            <div class="menu-area">
+              <div class="" style="margin-right: 30px; margin-left:20px">
+                <img src="{% static 'assets/images/logo/walet.png' %}" class="wallet" width="50px" srcset=""> {{profile.coin}}  جنيه  
+              </div>
+              <div class="">
+                <a href="{% url 'accounts:logout' %}" class="trk-btn trk-btn--border trk-btn--primary">
+                  <span>تسجيل خروج</span>
+                </a>
+              </div>
+
+
+              <!-- toggle icons -->
+              <div class="header-bar d-lg-none header-bar--style1">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ===============>> Header section end here <<================= -->
+
+
+<!-- block body  django-->
+{% block body %}
+
+{% endblock %}
+
+
+
+  <!-- ===============>> footer start here <<================= -->
+  <footer class="footer brand-1">
+    <div class="container">
+      <div class="footer__wrapper">
+        <div class="footer__top footer__top--style1">
+          <div class="row gy-5 gx-4">
+            <div class="col-md-8">
+              <div class="footer__about">
+                <a href="{% url 'home:home_ar' %}" class="footer__about-logo">
+                  <img style="width:250px;" src="{% static 'assets/images/logo/preloader.png' %}"
+                    alt="Logo"></a>
+                <p class="footer__about-moto ">
+                  النجاح في السوق ينتمي إلى الأشخاص الذين يسعون للتعلم، وليس لأولئك الذين يتداولون استنادًا إلى المشاعر.
+في مدرسة تداول الحيتان، نضع التعليم في المقام الأول.
+                  <span class="green-color">
+                    هل أنتم مستعدون لتصبحوا حوتًا من بين حيتان التداول؟
+                  </span>
+                  
+                </p>
+
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="footer__links">
+                <div class="footer__links-tittle">
+                  <h6 class="green-color">روابط مختصرة</h6>
+                </div>
+                <div class="footer__links-content">
+                  <ul class="footer__linklist">
+                    <li class="footer__linklist-item"> <a href="{% url 'accounts:profile_ar' %}">البروفايل</a>
+                    </li>
+                    <li class="footer__linklist-item"> <a href="{% url 'courses:courses_category_ar' %}">الكورسات</a>
+                    </li>
+                    <li class="footer__linklist-item"> <a href="https://www.tradingview.com">Trading View موقع</a>
+                    </li>
+                    <li class="footer__linklist-item"> <a href="https://sa.investing.com/economic-calendar/"> المفكرة الاقتصادية</a> </li>
+                    <li class="footer__linklist-item"> <a href="{% url 'contact:contact_ar' %}">تواصل معنا</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__shape">
+      <span class="footer__shape-item footer__shape-item--1" style="left:80%"><img src="{% static 'assets/images/footer/1.png' %}"
+          alt="shape icon"></span>
+      <span class="footer__shape-item footer__shape-item--2"> <span></span> </span>
+    </div>
+  </footer>
+  <!-- ===============>> footer end here <<================= -->
+
+
+
+  <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">  <div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="staticBackdropLabel">
+        اشعارات
+      </h5>
+      <button type="button" style="position: absolute;left: 20px;" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body" id="modal-body-content">
+        {% if messages %}
+            <div class="alert" role="alert">
+                {% for message in messages %}
+                    {{ message|escapejs }}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">اغلاق</button>
+    </div>
+  </div>
+</div>
+</div>
+<!--end modal-->
+
+
+
+  <!-- ===============>>  start here <<================= -->
+  <a href="#" class=" --home1"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
+  <!-- ===============>>  ending here <<================= -->
+
+
+  <!-- vendor plugins -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/js/all.min.js' %}"></script>
+  <script src="{% static 'assets/js/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/js/aos.js' %}"></script>
+  <script src="{% static 'assets/js/fslightbox.js' %}"></script>
+  <script src="{% static 'assets/js/purecounter_vanilla.js' %}"></script>
+
+
+
+
+
+
+  <script src="{% static 'assets/js/custom.js' %}"></script>
+
+
+  <script>
+     //prevent right click
+     document.addEventListener('contextmenu', event => event.preventDefault());
+     //prevent f12
+     document.onkeypress = function (event) {
+       event = (event || window.event);
+       if (event.keyCode == 123) {
+         return false;
+       }
+     }
+     // prevent ctrl+shift+i
+     document.addEventListener('keydown', function (event) {
+       if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+         return false;
+       }
+     });
+     // prevent ctrl+u
+     document.addEventListener('keydown', function (event) {
+       if (event.ctrlKey && event.keyCode == 85) {
+         return false;
+       }
+     });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var messages = document.querySelectorAll(".alert");
+        if (messages.length > 1) {
+            var modal = new bootstrap.Modal(document.getElementById("staticBackdrop"));
+            modal.show();
+        } else {
+            var modal = new bootstrap.Modal(document.getElementById("staticBackdrop"));
+            modal.hide();
+        }
+    });
+    </script>
+
+
+
+  <script>
+
+
+    document.getElementById('selectimage').addEventListener('click', function () {
+      document.getElementById('image').click();
+    });
+
+   
+
+  </script>
+
+  {% block script %}
+  {% endblock %}
+
+
+</body>
+
+
+</html>
+
